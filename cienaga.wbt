@@ -1,0 +1,433 @@
+#VRML_SIM R2023b utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/floors/protos/RectangleArena.proto"
+
+WorldInfo {
+  title "Robot domiciliario - Cienaga, Magdalena - Semana 1"
+  info [
+    "Barrio estilizado de Cienaga con un parque central de 8 entradas y un robot domiciliario autonomo."
+  ]
+  basicTimeStep 16
+  coordinateSystem "ENU"
+  contactProperties [
+    ContactProperties {
+      material1 "default"
+      material2 "caster"
+      coulombFriction [ 0 ]
+    }
+  ]
+}
+Viewpoint {
+  orientation 1 0 0 0.785
+  position 0 -21 21
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+RectangleArena {
+  floorSize 24 24
+  wallHeight 0.4
+  floorAppearance PBRAppearance {
+    baseColor 0.62 0.68 0.45
+    roughness 1
+    metalness 0
+  }
+}
+
+Solid {
+  translation 0 7.5 0.005
+  name "calle_norte"
+  children [
+    Shape {
+      appearance PBRAppearance { baseColor 0.27 0.27 0.3 roughness 1 metalness 0  }
+      geometry Box { size 18.0 3.0 0.01 }
+    }
+  ]
+}
+
+Solid {
+  translation 0 -7.5 0.005
+  name "calle_sur"
+  children [
+    Shape {
+      appearance PBRAppearance { baseColor 0.27 0.27 0.3 roughness 1 metalness 0  }
+      geometry Box { size 18.0 3.0 0.01 }
+    }
+  ]
+}
+
+Solid {
+  translation 7.5 0 0.005
+  name "calle_este"
+  children [
+    Shape {
+      appearance PBRAppearance { baseColor 0.27 0.27 0.3 roughness 1 metalness 0  }
+      geometry Box { size 3.0 12.0 0.01 }
+    }
+  ]
+}
+
+Solid {
+  translation -7.5 0 0.005
+  name "calle_oeste"
+  children [
+    Shape {
+      appearance PBRAppearance { baseColor 0.27 0.27 0.3 roughness 1 metalness 0  }
+      geometry Box { size 3.0 12.0 0.01 }
+    }
+  ]
+}
+
+Solid {
+  translation -9.6 10.6 1.05
+  name "casa_1"
+  children [
+    Shape {
+      appearance PBRAppearance { baseColor 0.35 0.65 0.85 roughness 1 metalness 0  }
+      geometry Box { size 3.6 2.4 2.1 }
+    }
+    Transform {
+      translation 0 0 1.1
+      children [
+        Shape {
+          appearance PBRAppearance { baseColor 0.45 0.2 0.15 roughness 1 metalness 0  }
+          geometry Box { size 3.8 2.6 0.1 }
+        }
+      ]
+    }
+  ]
+  boundingObject Box { size 3.6 2.4 2.1 }
+}
+
+Solid {
+  translation -4.8 10.6 1.2
+  name "restaurante_el_muelle"
+  children [
+    Shape {
+      appearance PBRAppearance { baseColor 0.95 0.45 0.1 roughness 1 metalness 0  }
+      geometry Box { size 3.6 2.4 2.4 }
+    }
+    Transform {
+      translation 0 0 1.25
+      children [
+        Shape {
+          appearance PBRAppearance { baseColor 0.6 0.1 0.1 roughness 1 metalness 0  }
+          geometry Box { size 3.8 2.6 0.1 }
+        }
+      ]
+    }
+  ]
+  boundingObject Box { size 3.6 2.4 2.4 }
+}
+
+Solid {
+  translation 0.0 10.6 1.1
+  name "base_central"
+  children [
+    Shape {
+      appearance PBRAppearance { baseColor 0.3 0.45 0.85 roughness 1 metalness 0  }
+      geometry Box { size 3.6 2.4 2.2 }
+    }
+    Transform {
+      translation 0 0 1.1500000000000001
+      children [
+        Shape {
+          appearance PBRAppearance { baseColor 0.15 0.2 0.4 roughness 1 metalness 0  }
+          geometry Box { size 3.8 2.6 0.1 }
+        }
+      ]
+    }
+  ]
+  boundingObject Box { size 3.6 2.4 2.2 }
+}
+
+Solid {
+  translation 4.8 10.6 0.9
+  name "casa_4"
+  children [
+    Shape {
+      appearance PBRAppearance { baseColor 0.9 0.9 0.85 roughness 1 metalness 0  }
+      geometry Box { size 3.6 2.4 1.8 }
+    }
+    Transform {
+      translation 0 0 0.9500000000000001
+      children [
+        Shape {
+          appearance PBRAppearance { baseColor 0.45 0.2 0.15 roughness 1 metalness 0  }
+          geometry Box { size 3.8 2.6 0.1 }
+        }
+      ]
+    }
+  ]
+  boundingObject Box { size 3.6 2.4 1.8 }
+}
+
+Solid {
+  translation 9.6 10.6 1.05
+  name "casa_5"
+  children [
+    Shape {
+      appearance PBRAppearance { baseColor 0.8 0.55 0.75 roughness 1 metalness 0  }
+      geometry Box { size 3.6 2.4 2.1 }
+    }
+    Transform {
+      translation 0 0 1.1
+      children [
+        Shape {
+          appearance PBRAppearance { baseColor 0.45 0.2 0.15 roughness 1 metalness 0  }
+          geometry Box { size 3.8 2.6 0.1 }
+        }
+      ]
+    }
+  ]
+  boundingObject Box { size 3.6 2.4 2.1 }
+}
+
+Solid {
+  translation -9.6 -10.6 1.2
+  name "casa_6"
+  children [
+    Shape {
+      appearance PBRAppearance { baseColor 0.95 0.65 0.25 roughness 1 metalness 0  }
+      geometry Box { size 3.6 2.4 2.4 }
+    }
+    Transform {
+      translation 0 0 1.25
+      children [
+        Shape {
+          appearance PBRAppearance { baseColor 0.45 0.2 0.15 roughness 1 metalness 0  }
+          geometry Box { size 3.8 2.6 0.1 }
+        }
+      ]
+    }
+  ]
+  boundingObject Box { size 3.6 2.4 2.4 }
+}
+
+Solid {
+  translation -4.8 -10.6 1.35
+  name "casa_7"
+  children [
+    Shape {
+      appearance PBRAppearance { baseColor 0.45 0.75 0.75 roughness 1 metalness 0  }
+      geometry Box { size 3.6 2.4 2.7 }
+    }
+    Transform {
+      translation 0 0 1.4000000000000001
+      children [
+        Shape {
+          appearance PBRAppearance { baseColor 0.45 0.2 0.15 roughness 1 metalness 0  }
+          geometry Box { size 3.8 2.6 0.1 }
+        }
+      ]
+    }
+  ]
+  boundingObject Box { size 3.6 2.4 2.7 }
+}
+
+Solid {
+  translation 0.0 -10.6 0.9
+  name "casa_8"
+  children [
+    Shape {
+      appearance PBRAppearance { baseColor 0.96 0.8 0.3 roughness 1 metalness 0  }
+      geometry Box { size 3.6 2.4 1.8 }
+    }
+    Transform {
+      translation 0 0 0.9500000000000001
+      children [
+        Shape {
+          appearance PBRAppearance { baseColor 0.45 0.2 0.15 roughness 1 metalness 0  }
+          geometry Box { size 3.8 2.6 0.1 }
+        }
+      ]
+    }
+  ]
+  boundingObject Box { size 3.6 2.4 1.8 }
+}
+
+Solid {
+  translation 4.8 -10.6 1.05
+  name "casa_9"
+  children [
+    Shape {
+      appearance PBRAppearance { baseColor 0.35 0.65 0.85 roughness 1 metalness 0  }
+      geometry Box { size 3.6 2.4 2.1 }
+    }
+    Transform {
+      translation 0 0 1.1
+      children [
+        Shape {
+          appearance PBRAppearance { baseColor 0.45 0.2 0.15 roughness 1 metalness 0  }
+          geometry Box { size 3.8 2.6 0.1 }
+        }
+      ]
+    }
+  ]
+  boundingObject Box { size 3.6 2.4 2.1 }
+}
+
+Solid {
+  translation 9.6 -10.6 1.2
+  name "casa_10"
+  children [
+    Shape {
+      appearance PBRAppearance { baseColor 0.93 0.5 0.4 roughness 1 metalness 0  }
+      geometry Box { size 3.6 2.4 2.4 }
+    }
+    Transform {
+      translation 0 0 1.25
+      children [
+        Shape {
+          appearance PBRAppearance { baseColor 0.45 0.2 0.15 roughness 1 metalness 0  }
+          geometry Box { size 3.8 2.6 0.1 }
+        }
+      ]
+    }
+  ]
+  boundingObject Box { size 3.6 2.4 2.4 }
+}
+
+Solid {
+  translation 10.6 4.8 1.35
+  name "casa_11"
+  children [
+    Shape {
+      appearance PBRAppearance { baseColor 0.55 0.8 0.55 roughness 1 metalness 0  }
+      geometry Box { size 2.4 3.6 2.7 }
+    }
+    Transform {
+      translation 0 0 1.4000000000000001
+      children [
+        Shape {
+          appearance PBRAppearance { baseColor 0.45 0.2 0.15 roughness 1 metalness 0  }
+          geometry Box { size 2.6 3.8 0.1 }
+        }
+      ]
+    }
+  ]
+  boundingObject Box { size 2.4 3.6 2.7 }
+}
+
+Solid {
+  translation 10.6 0.0 0.9
+  name "casa_12"
+  children [
+    Shape {
+      appearance PBRAppearance { baseColor 0.9 0.9 0.85 roughness 1 metalness 0  }
+      geometry Box { size 2.4 3.6 1.8 }
+    }
+    Transform {
+      translation 0 0 0.9500000000000001
+      children [
+        Shape {
+          appearance PBRAppearance { baseColor 0.45 0.2 0.15 roughness 1 metalness 0  }
+          geometry Box { size 2.6 3.8 0.1 }
+        }
+      ]
+    }
+  ]
+  boundingObject Box { size 2.4 3.6 1.8 }
+}
+
+Solid {
+  translation 10.6 -4.8 1.05
+  name "casa_13"
+  children [
+    Shape {
+      appearance PBRAppearance { baseColor 0.8 0.55 0.75 roughness 1 metalness 0  }
+      geometry Box { size 2.4 3.6 2.1 }
+    }
+    Transform {
+      translation 0 0 1.1
+      children [
+        Shape {
+          appearance PBRAppearance { baseColor 0.45 0.2 0.15 roughness 1 metalness 0  }
+          geometry Box { size 2.6 3.8 0.1 }
+        }
+      ]
+    }
+  ]
+  boundingObject Box { size 2.4 3.6 2.1 }
+}
+
+Solid {
+  translation -10.6 4.8 1.2
+  name "casa_14"
+  children [
+    Shape {
+      appearance PBRAppearance { baseColor 0.95 0.65 0.25 roughness 1 metalness 0  }
+      geometry Box { size 2.4 3.6 2.4 }
+    }
+    Transform {
+      translation 0 0 1.25
+      children [
+        Shape {
+          appearance PBRAppearance { baseColor 0.45 0.2 0.15 roughness 1 metalness 0  }
+          geometry Box { size 2.6 3.8 0.1 }
+        }
+      ]
+    }
+  ]
+  boundingObject Box { size 2.4 3.6 2.4 }
+}
+
+Solid {
+  translation -10.6 0.0 1.35
+  name "casa_15"
+  children [
+    Shape {
+      appearance PBRAppearance { baseColor 0.45 0.75 0.75 roughness 1 metalness 0  }
+      geometry Box { size 2.4 3.6 2.7 }
+    }
+    Transform {
+      translation 0 0 1.4000000000000001
+      children [
+        Shape {
+          appearance PBRAppearance { baseColor 0.45 0.2 0.15 roughness 1 metalness 0  }
+          geometry Box { size 2.6 3.8 0.1 }
+        }
+      ]
+    }
+  ]
+  boundingObject Box { size 2.4 3.6 2.7 }
+}
+
+Solid {
+  translation -10.6 -4.8 0.9
+  name "casa_16"
+  children [
+    Shape {
+      appearance PBRAppearance { baseColor 0.96 0.8 0.3 roughness 1 metalness 0  }
+      geometry Box { size 2.4 3.6 1.8 }
+    }
+    Transform {
+      translation 0 0 0.9500000000000001
+      children [
+        Shape {
+          appearance PBRAppearance { baseColor 0.45 0.2 0.15 roughness 1 metalness 0  }
+          geometry Box { size 2.6 3.8 0.1 }
+        }
+      ]
+    }
+  ]
+  boundingObject Box { size 2.4 3.6 1.8 }
+}
+
+Solid {
+  translation 0 0 0
+  name "parque_central"
+  children [
+    Transform {
+      translation 0 0 0.04
+      rotation 0 0 1 0.0
+      children [
+        Shape { appearance PBRAppearance { baseColor 0.3 0.6 0.3 roughness 1 metalness 0  } geometry Box { size 12.0 12.0 0.08 } }
+      ]
+    }
+  ]
+  boundingObject Transform { translation 0 0 0.15 children [ Box { size 12.0 12.0 0.3 } ] }
+}
